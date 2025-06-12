@@ -1,0 +1,10 @@
+{
+  "scriptFile": "BL/__init__.py",
+  "bindings": [
+    {
+      "name": "attachment",  
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ]
+}
