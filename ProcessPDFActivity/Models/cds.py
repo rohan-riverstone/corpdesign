@@ -17,7 +17,7 @@ class CommercialDesignServices:
                         continue
                     row_idx = cell.get("rowIndex", cell.get("row_index"))
                     col_idx = cell.get("columnIndex", cell.get("column_index"))
-                    content = cell.get("content", "").replace("\n", " ").strip()
+                    content = cell.get("content", "").replace("\n", " ").strip() if len(cell.get('content', '')) < 9 else cell.get('content', '').strip()
                     if row_idx not in rows:
                         rows[row_idx] = {}
                     rows[row_idx][col_idx] = content
@@ -27,10 +27,14 @@ class CommercialDesignServices:
                     row = [rows[row_idx].get(col_idx, "") for col_idx in range(5)]
                     if not row or all(cell.strip() == "" for cell in row):
                         continue
+                    split_description = row[2].split("\n")
+                    if len(split_description) > 1:
+                        row[2] = " ".join(split_description[:2])
                     item = {
                         "Line": row[0],
-                        "Qty Ordered": row[1],
-                        "Catalog Number/Description": row[2],
+                        "Qty": row[1],
+                        "Product Code": split_description[0].strip(),
+                        "Description": split_description[1].strip() if len(split_description) > 1 else "",
                         "Unit Price": row[3],
                         "Extended Amount": row[4]
                     }
