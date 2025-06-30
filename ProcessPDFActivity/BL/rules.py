@@ -11,6 +11,9 @@ from ..Models.everything_2_go import Everything2go
 from ..Models.compass_office_solutions import CompassOfficeSolution
 from ..Models.office_furniture_expo import OfficeFurniture
 from ..Models.cds import CommercialDesignServices
+from ..Models.turnkey_project_services import TurnkeyProjectServices
+from ..Models.mr_office_furniture import Mr_Office_Furniture
+from ..Models.modular_office_envireonments import Modular_Office_Environment
 
 class Rules:
     NAME_RULES = {
@@ -34,6 +37,9 @@ class Rules:
     'compass a better way':'Compass Office Solutions',
     'office furniture expo':'Office Furniture Expo (GA)',
     'CCS':'Commercial Design Services',
+    'turnkey project services':'Turnkey Project Services',
+    'mroffice furniture':'Mr Office Furniture',
+    'hq workspaces, inc.':'Modular Office Environment',
 }
 
     MODEL_RULES = {
@@ -49,8 +55,10 @@ class Rules:
         'Boca Business Furniture, Inc.': BocaFurniture,
         'Compass Office Solutions': CompassOfficeSolution,
         'Office Furniture Expo (GA)':OfficeFurniture,
-        'Commercial Design Services': CommercialDesignServices
-
+        'Commercial Design Services': CommercialDesignServices,
+        'Turnkey Project Services': TurnkeyProjectServices,
+        'Mr Office Furniture': Mr_Office_Furniture,
+        'Modular Office Environment' : Modular_Office_Environment,
     }
 
     @classmethod

@@ -59,22 +59,24 @@ class FileParser:
 
             result_data = Rules.map_models(data, customer_name)
             result_data['po_file']={"email":{"Attachments":[{"Name":filename,"ContentBytes":content_bytes}]}}
-            #result_data['purchase_order'] = str(random.randint(100000, 999999))
+            result_data['purchase_order'] = str(random.randint(100000, 999999))
             jsonString = json.dumps(result_data, indent=4)
-            logging.info(f"jsonString: {jsonString}")
-            with open("data.txt", "w") as file:
-                file.write(f"jsonString: {jsonString}")
+            #logging.info(f"jsonString: {jsonString}")
             sJson = json.loads(jsonString)
             newJson = Netsuit_SO.so_creation(jsonString, self.config)
+            with open("data.json","w") as file:
+                json.dump(json.loads(jsonString),file,indent=4)
             if newJson:               
                 nJson = newJson if isinstance(newJson, dict) else json.loads(newJson)
             
             if nJson and isinstance(nJson, dict): 
                 status_code = nJson.get('statusCode')
                 result_json = self.merge_json_data(nJson, sJson)
+                #print(f"Result_Json: {result_json}")
                 if status_code == 200:
                     
                     status_dict = {item['productCode'].strip(): item for item in result_json['order_line_item']}
+                    print(f"status_dict: {status_dict}")
                     for sProd in result_json['order_line_items']:
                         product_code = sProd['product_code'].strip()
                         if product_code in status_dict:

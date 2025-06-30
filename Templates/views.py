@@ -31,19 +31,18 @@ def render_purchase_order_summary(progress: list) -> str:
             }
             table { 
                 width: 100%;
-                style="width:100%; 
                 border-collapse: collapse; 
-                margin-top: 10px;"}
+                margin-top: 10px;}
             th, td {
                 border: 2px solid #000;
                 padding: 10px;
                 text-align: left;
             }
             th {
-                style="border: 1px solid #ddd;
+                border: 1px solid #ddd;
                 padding: 8px; 
                 text-align: center;
-                background-color: #f4f4f4;"
+                background-color: #f4f4f4;
             }
             .status-success {
                 color: green;
@@ -63,7 +62,7 @@ def render_purchase_order_summary(progress: list) -> str:
         <div class="summary">
             <table>
                 <tr>
-                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;", colspan="3">
+                    <td style="padding: 8px; text-align: left;", colspan="3">
                         <strong>File:</strong> {{ entry.filename }},
                         <strong>Status:</strong> {{ entry.result.status }}
                         {% if entry.result.statusCode == 200 %}

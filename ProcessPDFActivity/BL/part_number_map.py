@@ -47,17 +47,17 @@ class ProductCodeMapper:
             product_code = product["product_code"]
             product_desc = product["description"]
             
-            # print(f"Processing Product: {product_code}")
+            print(f"Processing Product: {product_code}")
             
             if product_code in self.group_data:
                 print(f"Exact match found in group_data: {product_code}")
                 product["product_code"] = product_code
                 continue
             
-            # print(f"No exact match found for {product_code}, proceeding with partial matching...")
+            print(f"No exact match found for {product_code}, proceeding with partial matching...")
             
             product_keywords = self.extract_keywords(product_desc)
-            # print(f"Extracted Keywords: {product_keywords}")
+            print(f"Extracted Keywords: {product_keywords}")
 
             matching_groups = [key for key in self.group_data if key.startswith(product_code)]
             
@@ -71,7 +71,7 @@ class ProductCodeMapper:
                     continue
             
             if product_code in self.component_data:
-                # print(f"Exact match found in component_data: {product_code}")
+                print(f"Exact match found in component_data: {product_code}")
                 product["product_code"] = product_code
                 continue
             
@@ -86,8 +86,7 @@ class ProductCodeMapper:
                     product["product_code"] = best_match
                     continue
             
-            # print(f"No matches found for {product_code}, keeping original.")
-            
+            print(f"No matches found for {product_code}, keeping original.")
         
         return results
 
@@ -113,7 +112,7 @@ class ProductCodeMapper:
             if score > best_match_score:
                 best_match = match
                 best_match_score = score
-
+        print(f"best_match: {best_match}")
         return best_match
 
 product_mapper = ProductCodeMapper()

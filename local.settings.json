@@ -3,16 +3,24 @@
   "Values": {
       "FUNCTIONS_WORKER_RUNTIME": "python",
       "ADI_ENDPOINT": "https://corpdesign-di-uat.cognitiveservices.azure.com/",
+
       "ADI_KEY": "6r1qs1o3ONE0H9pnngCVFSVcTvLwnAyVBg7yMjL3xxnbROcp3KkwJQQJ99BBACYeBjFXJ3w3AAALACOGHgoG",
-      "APPLICATIONINSIGHTS_CONNECTION_STRING": "InstrumentationKey=f09425e9-9181-4b2d-aa46-0de370dd906e;IngestionEndpoint=https://eastus2-3.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus2.livediagnostics.monitor.azure.com/;ApplicationId=05b4238a-518f-42be-8d2b-9cc971e82961",
-      "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=aicorpdesigndev;AccountKey=G0ZeMrCQX9Fu6vo9cnZrINtA4XDBFA9f9dGJ9M95ntvGcUZWWKNJiThkvtC6QnmXvxWKl4icoETj+AStiVGM9A==;EndpointSuffix=core.windows.net",
+
+      "APPLICATIONINSIGHTS_CONNECTION_STRING": "InstrumentationKey=285997a1-336c-4441-86b0-4030376a057f;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/",
+
+      "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=aicorpdesignuat;AccountKey=UjTWshmxC8/n24IFcbb+4sGdxo+ihlonB1AMT99GefA5nP9zgiMLgF5eTx9OYKy37MU+qGWD1aeM+AStpHwDjA==;EndpointSuffix=core.windows.net",
+      
       "FUNCTIONS_EXTENSION_VERSION": "~4",
       "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=aicorpdesignuat;AccountKey=UjTWshmxC8/n24IFcbb+4sGdxo+ihlonB1AMT99GefA5nP9zgiMLgF5eTx9OYKy37MU+qGWD1aeM+AStpHwDjA==;EndpointSuffix=core.windows.net",
       "WEBSITE_CONTENTSHARE": "corpdesign",
-      "CORPDESIGN_STORAGE_CON_STR": "DefaultEndpointsProtocol=https;AccountName=aicorpdesigndev;AccountKey=G0ZeMrCQX9Fu6vo9cnZrINtA4XDBFA9f9dGJ9M95ntvGcUZWWKNJiThkvtC6QnmXvxWKl4icoETj+AStiVGM9A==;EndpointSuffix=core.windows.net",
-      "AZURE_STORAGE_ACCOUNT": "corpdesigndev",
-      "AZURE_STORAGE_KEY": "G0ZeMrCQX9Fu6vo9cnZrINtA4XDBFA9f9dGJ9M95ntvGcUZWWKNJiThkvtC6QnmXvxWKl4icoETj+AStiVGM9A==",
-      "AzureWebJobs.corp.Disabled": "false",
+
+      "CORPDESIGN_STORAGE_CON_STR": "DefaultEndpointsProtocol=https;AccountName=aicorpdesignuat;AccountKey=UjTWshmxC8/n24IFcbb+4sGdxo+ihlonB1AMT99GefA5nP9zgiMLgF5eTx9OYKy37MU+qGWD1aeM+AStpHwDjA==;EndpointSuffix=core.windows.net",
+      
+      "AZURE_STORAGE_ACCOUNT": "corpdesign-uat",
+
+      "AZURE_STORAGE_KEY": "UjTWshmxC8/n24IFcbb+4sGdxo+ihlonB1AMT99GefA5nP9zgiMLgF5eTx9OYKy37MU+qGWD1aeM+AStpHwDjA==",
+      
+      "AzureWebJobs.corp.Disabled": "false", 
       "NETSUITE_ENDPOINT_URL": "https://5272043-sb1.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=779&deploy=1",
       "NETSUITE_CONSUMER_KEY": "b481fe7abd3c8481c7dd222137e8fca4fc1d81a69c50a46197b27c87d00d1bae",
       "NETSUITE_CONSUMER_SECRET": "207f37803638450c29e943a79ca84a189850c0f6a39eef4737620d8eab124e31",
@@ -20,5 +28,6 @@
       "NETSUITE_ACCESS_TOKEN_SECRET":"73245b8dcb2ef47aa708dd3a4cad7da7494d4b4afa0bf2674b3b0a3505fd0dfb",
       "NETSUITE_REALM": "5272043_SB1",
       "NETSUITE_OAUTH_SIGN_METHOD":"HMAC-SHA256"
+
   }
 }
